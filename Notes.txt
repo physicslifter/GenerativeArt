@@ -1,0 +1,7 @@
+1st element, minimal rules, 2 sides:
+	1. random quadratic Bezier curve with no constraints
+	2. random curve Bezier curve with the following constraints:
+		A) endpoints must match with the endpoints of the first curve
+		B) curve cannot overlap the first curve
+
+"the second curve must intersect the first only at the two endpoints"

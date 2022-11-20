@@ -1,0 +1,15 @@
+to-dos
+- animate one 2-sided single object
+- figure out why endpoints dont match
+- write code for 3-sided figure
+- write code for filling in figure
+- write code for drawing an adjacent figure to a figure
+
+==
+
+completed
+- animate one curve
+
+==
+
+notes
