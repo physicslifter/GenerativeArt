@@ -4,7 +4,7 @@ from Bezier import QuadBezier
 import pdb
 
 screen = Screen()
-screen.setworldcoordinates(0, -1.25, 2 * pi, 1.25)
+screen.setworldcoordinates(0, 0, 100, 100)
 turtle = Turtle()
 turtle.width(4)
 
@@ -16,8 +16,8 @@ def draw_sine(drawer:Turtle, screen:Screen):
 
 def draw_initial_bezier(drawer:Turtle, screen:Screen):
     my_curve = QuadBezier(0, 0, 1, 2, 3, 0)
-    my_curve.random()
-    my_curve.max_k()
+    my_curve.random(max = 100)
+    my_curve.max_k(granuality=25)
     points = my_curve.calc_curve()
     drawer.pu()
     drawer.goto(points[0][0], points[1][0])

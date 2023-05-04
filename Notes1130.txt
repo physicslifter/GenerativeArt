@@ -1,0 +1,51 @@
+1. generate 2 random endpoints
+2. generate random control point for curve 1
+3. draw curve 1
+4. generate random control point for curve 2
+5. drawe curve 2 using control point for (4) and the endpoints from curve 1
+
+TO DO:
+develop technique for getting shapes that fit together
+- troubleshoot getting adjacent Bezier
+	- I know that endpoint2 is being calculated incorrectly, because it does 	not lie on the boundary/buffer
+
+
+COMPLETED
+- overlap between curves
+- endpoints not quite matching up
+- generalize curve so it can be convex
+- figure out how to reflect point over a line
+- generalize script to put into classes
+- write function for getting area of the shape
+- draw buffer around single shape
+
+
+New Steps
+- Generate 2 random endpoints
+- Calculate equation of line between 2 endpoints
+- Calculate curve 1 control point bounding box
+	- use line between control points w/ 30% of ends chopped off
+	- draw rectangle of width/length (30% dist. between control points) & dist. between control points
+- generate control point for curve 1 somewhere in bounding box
+- generate bounding box for curve 2 using point from curve 1 as corner
+
+- need to calculate when curve becomes vertical
+- mathematically or play around and guesstiimate?
+- how to get point that is inside of a bounding box of points?
+
+
+
+
+
+
+Getting angle:
+- abs(diff in xs)
+- 
+- Get chart/img created in paint 3d to automatically generate
+
+1. Generate random control point in bounding box
+2. get Bezier associated with control point
+3. test whether new bezier intersects existing shape (If fail, go back to 1)
+4. test whether new bezier completely envelopes existing shape (If fail, go back to 1)
+4. test whether new bezier "crosses over" first bezier curve (if fail, go back to 1)
+5. test whether area of new bezier is sufficient (if fail, go back to 1)
